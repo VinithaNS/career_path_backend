@@ -12,6 +12,7 @@ const SubCategoryRoutes = require("./src/router/subCategoryRoutes");
 const HomepageRoutes = require("./src/router/homePageRouter");
 const EleventhGroupRoutes = require("./src/router/eleventhGroupRouter");
 const DiplomaCourseRoutes = require("./src/router/diplomaCourseRouter");
+const AIReplaceRouter = require("./src/router/AIReplaceRouter");
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -28,6 +29,7 @@ app.use("/api/subcategories", SubCategoryRoutes);
 app.use("/api/homepage", HomepageRoutes);
 app.use("/api/eleventhGroups", EleventhGroupRoutes);
 app.use("/api/diplomaCourses", DiplomaCourseRoutes);
+app.use("/api/aiReplace", AIReplaceRouter);
 const PORT = process.env.PORT || 3000;
 const MONGO_URL = process.env.MONGO_URL;
 
